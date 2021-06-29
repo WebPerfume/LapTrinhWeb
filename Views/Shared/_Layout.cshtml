@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/_Reset.css")
+    @Styles.Render("~/Content/_Header.css")
+    @Styles.Render("~/Content/_NavSearch.css")
+    @Styles.Render("~/Content/_NavCart.css")
+    @Styles.Render("~/Content/_SubMenu.css")
+    @Styles.Render("~/Content/_Footer.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        @{
+            Html.RenderPartial("_Header");
+            Html.RenderPartial("_NavSearch");
+            Html.RenderPartial("_NavCart");
+        }
+    </header>
+
+    <main >
+        @RenderBody()
+    </main>
+    <footer>
+        @{
+            Html.RenderPartial("_Footer");
+        }
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/main.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
