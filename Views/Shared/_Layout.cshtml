@@ -11,6 +11,7 @@
     @Styles.Render("~/Content/_NavCart.css")
     @Styles.Render("~/Content/_SubMenu.css")
     @Styles.Render("~/Content/_Footer.css")
+    @Styles.Render("~/Content/_MessageAndBackToTop.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -22,8 +23,37 @@
         }
     </header>
 
-    <main >
+    <main>
         @RenderBody()
+        <div id="chat">
+            <button class="open-button">
+                <img src="~/IMG/message.png" width="40" />
+            </button>
+
+            <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <label class="text-center">Message</label>
+                    <textarea placeholder="Send Us The Message!" name="msg" required></textarea>
+
+                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn cancel">
+                        Close
+                    </button>
+                </form>
+            </div>
+
+            <div id="myBtn">
+                <img src="~/IMG/backToTop.png" width="50" />
+            </div>
+
+            <div style="background-color: black; color: white; padding: 30px">
+                Scroll Down
+            </div>
+            <div style="background-color: lightgrey; padding: 30px 30px 2500px">
+                This example demonstrates how to create a "scroll to top" button that
+                becomes visible <strong>when the user starts to scroll the page</strong>.
+            </div>
+        </div>
     </main>
     <footer>
         @{

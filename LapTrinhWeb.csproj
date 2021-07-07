@@ -135,6 +135,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\_MessageAndBackToTop.css" />
     <Content Include="Content\_SubMenu.css" />
     <Content Include="Content\_Header.css" />
     <Content Include="Content\_NavCart.css" />
@@ -145,12 +146,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\car.png" />
     <Content Include="IMG\carousel1.jpg" />
     <Content Include="IMG\carousel2.jpg" />
     <Content Include="IMG\carousel3.jpg" />
     <Content Include="IMG\cart.png" />
     <Content Include="IMG\close.png" />
+    <Content Include="IMG\message.png" />
     <Content Include="IMG\exchange.png" />
     <Content Include="IMG\facebook.png" />
     <Content Include="IMG\home.png" />
