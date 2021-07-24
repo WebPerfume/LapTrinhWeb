@@ -1,0 +1,48 @@
+﻿.onlShop{
+    padding: 70px 0;
+}
+
+.onlShop h2{
+    font-size: 50px;
+    margin-bottom:40px;
+}
+
+
+.onlShop h3{
+    font-size: 20px;
+    margin-bottom:30px;
+}
+
+
+.onlShop .purchase {
+    font-size: 18px;
+    margin-bottom:20px;
+}
+
+.onlShop__wrap{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.onlShop__item{
+    margin-top: 50px;
+    width: calc((100% / 3) - 20px);
+    text-align:center;
+    padding: 0 40px;
+}
+
+.onlShop__logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.onlShop__item .desc {
+    line-height: 25px;
+}
