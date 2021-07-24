@@ -4,7 +4,7 @@
 
 <section class="carousel">
     <div class="carousel__wrap">
-        <div class="carousel__item active">
+        <div class="carousel__item">
             <img src="~/IMG/carousel2.jpg" />
         </div>
         <div class="carousel__item">
@@ -13,9 +13,9 @@
         <div class="carousel__item">
             <img src="~/IMG/carousel3.jpg" />
         </div>
-        <img class="left-arrow" src="~/IMG/left-arrow.png" width="40"/>
-        <img class="right-arrow" src="~/IMG/right-arrow.png" width="40"/>
     </div>
+    <img class="left-arrow" src="~/IMG/left-arrow.png" width="40" />
+    <img class="right-arrow" src="~/IMG/right-arrow.png" width="40" />
 </section>
 
 <section class="newProducts">
@@ -113,31 +113,29 @@
                 <p class="title">Chanel Coco Mademoiselle</p>
                 <p><span>3.290.000</span><span>4.200.200</span></p>
             </div>
-            <img class="left-arrow" src="~/IMG/left-arrow.png" width="40" />
-            <img class="right-arrow" src="~/IMG/right-arrow.png" width="40" />
         </div>
-   </div>
+    </div>
 </section>
 
 <section class="banner">
         <div class="banner__item">
             <img src="~/IMG/car.png" width="50"/>
             <div class="txt">
-                <p>FreeShip</p>
+                @Html.ActionLink("Freeship", "Feedback")
                 <span>FreeShip with orders over 500</span>
             </div>
         </div>
         <div class="banner__item">
             <img src="~/IMG/technical-support.png" width="50" />
             <div class="txt">
-                <p>@Html.ActionLink("Customer Service(9:00 - 21:00)","Feedback")</p>
+                @Html.ActionLink("Customer Service(9:00 - 21:00)","Feedback")
                 <span>013 32495 324</span>
             </div>
         </div>
         <div class="banner__item">
             <img src="~/IMG/exchange.png" width="50" />
             <div class="txt">
-                <p>Exchange</p>
+                @Html.ActionLink("Exchange", "Feedback")
                 <span>Within 07 days</span>
             </div>
         </div>

@@ -38,5 +38,9 @@ namespace LapTrinhWeb.Controllers
             
             return View();
         }
+        public ActionResult Address()
+        {
+            return View();
+        }
     }
 }
