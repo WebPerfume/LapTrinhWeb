@@ -42,5 +42,18 @@ namespace LapTrinhWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult OnlineShopping()
+        {
+            return View();
+        }
+        public ActionResult Group()
+        {
+            return View();
+        }
+        public ActionResult Return()
+        {
+            return View();
+        }
     }
 }

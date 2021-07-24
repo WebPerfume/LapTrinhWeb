@@ -48,51 +48,6 @@ window.addEventListener('click', (e) => {
 })
 
 
-//Carousel Slider
-let slide_index = 0
-let slide_play = true
-let slides = document.querySelectorAll('.carousel__item')
-
-//Hide Carousel
-hideAllSlide = () => {
-    slides.forEach(e => {
-        e.classList.remove('active')
-    })
-}
-
-//Show Carousel
-/*showSlide = () => {
-    hideAllSlide()
-    slides[slide_index].classList.add('active')
-}
-
-
-//Even Slider
-nextSlide = () => slide_index = slide_index + 1 === slides.length ? 0 : slide_index + 1
-
-prevSlide = () => slide_index = slide_index - 1 < 0 ? slides.length - 1 : slide_index - 1
-
-
-document.querySelector('.carousel__item').addEventListener('mouseover', () => slide_play = false)
-
-
-document.querySelector('.carousel__item').addEventListener('mouseleave', () => slide_play = true)
-
-
-document.querySelector('.right-arrow').addEventListener('click', () => {
-    nextSlide()
-    showSlide()
-})
-
-document.querySelector('.left-arrow').addEventListener('click', () => {
-    prevSlide()
-    showSlide()
-})
-
-showSlide()
-*/
-
-
 
 //Open-Close Message button form
 const openFormButton = document.querySelector('.open-button');

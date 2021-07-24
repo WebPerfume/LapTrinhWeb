@@ -128,7 +128,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GuideController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroduceController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -208,6 +207,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\_MessageAndBackToTop.css" />
+    <Content Include="Content\_ShoppingGuid.css" />
     <Content Include="Content\_SubMenu.css" />
     <Content Include="Content\_Header.css" />
     <Content Include="Content\_NavCart.css" />
@@ -221,11 +221,14 @@
     <Content Include="IMG\addressbg.jpg" />
     <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\car.png" />
+    <Content Include="IMG\car2.png" />
     <Content Include="IMG\carousel1.jpg" />
     <Content Include="IMG\carousel2.jpg" />
     <Content Include="IMG\carousel3.jpg" />
     <Content Include="IMG\cart.png" />
     <Content Include="IMG\close.png" />
+    <Content Include="IMG\letter.png" />
+    <Content Include="IMG\location.png" />
     <Content Include="IMG\message.png" />
     <Content Include="IMG\exchange.png" />
     <Content Include="IMG\facebook.png" />
@@ -238,6 +241,7 @@
     <Content Include="IMG\saleup.jpg" />
     <Content Include="IMG\search.png" />
     <Content Include="IMG\searchblack.png" />
+    <Content Include="IMG\table.jpg" />
     <Content Include="IMG\technical-support.png" />
     <Content Include="IMG\user.png" />
     <Content Include="Models\Model1.Context.tt">
@@ -293,10 +297,12 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Home\Feedback.cshtml" />
     <Content Include="Views\Home\Address.cshtml" />
+    <Content Include="Views\Home\OnlineShopping.cshtml" />
+    <Content Include="Views\Home\Group.cshtml" />
+    <Content Include="Views\Home\Return.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Guide\" />
     <Folder Include="Views\Introduce\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>
