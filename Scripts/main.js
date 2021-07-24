@@ -61,7 +61,7 @@ hideAllSlide = () => {
 }
 
 //Show Carousel
-showSlide = () => {
+/*showSlide = () => {
     hideAllSlide()
     slides[slide_index].classList.add('active')
 }
@@ -90,7 +90,7 @@ document.querySelector('.left-arrow').addEventListener('click', () => {
 })
 
 showSlide()
-
+*/
 
 
 
@@ -133,4 +133,26 @@ mybutton.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
 })
 
-    
+
+$(document).ready(function () {
+    let $carousel = $(".carousel__wrap");
+    $carousel.flickity({
+        //Options
+        cellAlign: "left",
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        autoPlay: true,
+        friction: 0.8,
+    });
+
+    //prev , next button
+    $(".left-arrow").on("click", function () {
+        $carousel.flickity("next");
+    });
+    $(".right-arrow").on("click", function () {
+        $carousel.flickity("previous");
+    });
+})
+

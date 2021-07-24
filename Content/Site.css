@@ -74,26 +74,27 @@ img{
 }
 
 /*Carousel*/
-.carousel__item img{
-    width: 100%;
+.carousel__wrap {
     height: 700px;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
 }
 
-.carousel__item{
-    display: none;
-}
-
-.carousel__item.active{
-    display: block;
-}
-
-.carousel__wrap{
+.carousel__item {
+    height: 100%;
+    width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
+    .carousel__item img {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+        position: absolute;
+    }
 
 
 
@@ -165,19 +166,14 @@ img{
 
 .saleUp__wrap{
     display: flex;
+    height: 400px;
     justify-content: space-between;
-}
-
-.saleUp__wrap .left-arrow{
-    left: 150px;
-}
-.saleUp__wrap .right-arrow {
-    right: 150px;
 }
 
     .saleUp__wrap .product__items {
         width: calc((100% / 4) - 10px);
         background: white;
+        height: 100%; 
     }
 
 /*Banner*/
@@ -201,11 +197,14 @@ img{
     margin-left: 20px;
 }
 
-    .banner__item .txt p{
+    .banner__item .txt a {
+        display:block;
+        color: black;
         margin-bottom: 10px;
         font-size: 20px;
-        font-weight:bold;
+        font-weight: bold;
     }
+
 
     .banner__item .txt span{
         font-size: 16px;

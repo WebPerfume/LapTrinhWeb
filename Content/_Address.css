@@ -1,0 +1,44 @@
+﻿.system {
+    padding: 70px 0;
+}
+
+.system h2{
+    font-size: 40px;
+}
+
+.system__wrap{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.system__item {
+    width: calc((100% / 3) - 30px);
+    background-image: url(/IMG/addressbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
+}
+
+.system__item h3{
+    text-align:center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+    .system__item h5{
+        text-align: left;
+    }
+
+
+.system__adr p {
+    margin-bottom: 20px;
+}
+
+.system__adr:not(:last-child){
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
