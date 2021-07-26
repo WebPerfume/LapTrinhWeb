@@ -24,7 +24,7 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
             if (result && ModelState.IsValid)
             {
                 SessionHelper.SetSession(new UserSession() { Email = model.Email });
-                return RedirectToAction("Index", "Panel");
+                return RedirectToAction("Index", "Products");
             }
             else
             {
