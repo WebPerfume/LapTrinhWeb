@@ -13,7 +13,7 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
 {
     public class BrandsController : Controller
     {
-        private QLBHEntities db = new QLBHEntities();
+        private QLBHEntities2 db = new QLBHEntities2();
 
         // GET: Admin/Brands
         private List<Brand> ListB()

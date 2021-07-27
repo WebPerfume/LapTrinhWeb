@@ -12,21 +12,24 @@ namespace LapTrinhWeb.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Admin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public Admin()
         {
-            this.Orderdetails = new HashSet<Orderdetail>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public int OrderId { get; set; }
-        public Nullable<System.DateTime> CreateDate { get; set; }
-        public Nullable<int> Status { get; set; }
-        public Nullable<int> UserId { get; set; }
+        public int AdminId { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Pass { get; set; }
+        public Nullable<int> PermissionId { get; set; }
+        public string Address { get; set; }
     
-        public virtual Admin Admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orderdetail> Orderdetails { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+        public virtual Permission Permission { get; set; }
     }
 }

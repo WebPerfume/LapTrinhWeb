@@ -18,6 +18,12 @@ namespace LapTrinhWeb
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Product", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Register",
+                url: "regis-ter",
+                defaults: new { controller = "Home", action = "Register", id = UrlParameter.Optional }
+            );
         }
     }
 }
