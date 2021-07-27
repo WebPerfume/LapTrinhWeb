@@ -1,0 +1,31 @@
+﻿@model LapTrinhWeb.Models.Product
+@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="~/IMG/@Model.Img" alt="..." /></div>
+            <div class="col-md-6">
+                <p style="font-size:50px">@Html.DisplayFor(model => model.ProductName)</p>
+                <p style="font-size:30px">Preview: <br /> @Html.DisplayFor(model => model.Detail) There's nothing wrong with dinner at a fancy place or an expensive piece of jewelry when you are trying to impress someone and win her heart. However, what you need in addition to these louder means of displaying affection is a subtler strategy, something that will make her think of you in the quiet moments before she falls asleep. Introduced in 2012 for men, Versace Eros by Versace combines the aromatic notes of mint, green apple, tonka bean and geranium to create one unforgettable fragrance.</p>
+                <span style="font-size:30px">@Html.DisplayNameFor(m => m.Price):</span>
+                <span style="font-size:30px">@Html.DisplayFor(model => model.Price)</span>
+
+                <div class="d-flex">
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
+                    <button>@Html.ActionLink("Back to List", "Index")</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
