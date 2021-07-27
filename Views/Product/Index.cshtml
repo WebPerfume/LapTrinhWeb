@@ -40,7 +40,7 @@
 
                         <img src="~/IMG/@item.Img" />
                         <p class="title">@item.ProductName</p>
-                        <p><span>@item.Price</span><span>4.200.200</span></p>
+                        <p><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture,"{0:C0}",item.Price)</span><span>4.200.200</span></p>
                         <button class="btn btn-outline-dark flex-shrink-0" type="button">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart

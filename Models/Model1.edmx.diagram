@@ -4,19 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a329959a46e4483595fdb64ca913597b" Name="Diagram1">
+      <Diagram DiagramId="ec7e9d1bddaa4243b8f6ed3384de4ca1" Name="Diagram1">
+        <EntityTypeShape EntityType="QLBHModel.Admin" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Brand" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Orderdetail" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Order" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Permission" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.TypeP" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBHModel.User" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel.User" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="QLBHModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBHModel.FK_User_User" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_Product_Brand" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_Orderdetails_Order" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_Orderdetails_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBHModel.FK_Order_User" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBHModel.FK_User_User" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_Product_Type" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
