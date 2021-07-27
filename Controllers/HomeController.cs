@@ -9,7 +9,7 @@ namespace LapTrinhWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private webEntities db = new webEntities();
+        private QLBHEntities db = new QLBHEntities();
         public ActionResult Index()
         {
             return View();
@@ -28,16 +28,7 @@ namespace LapTrinhWeb.Controllers
 
             return View();
         }
-        public ActionResult Feedback()
-        {
-            Feedback fb = new Feedback();
-            fb.Name = Request["Name"];
-           
-            fb.Phone = Request["Phone"];
-            fb.Email = Request["Email"];
-            
-            return View();
-        }
+      
         public ActionResult Address()
         {
             return View();

@@ -12,12 +12,14 @@ namespace LapTrinhWeb.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class SystemConfig
+    public partial class Orderdetail
     {
-        public string ID { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Value { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public int OrderId { get; set; }
+        public int ProductId { get; set; }
+        public Nullable<int> Quantity { get; set; }
+        public Nullable<decimal> Total { get; set; }
+    
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

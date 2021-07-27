@@ -13,10 +13,10 @@ namespace LapTrinhWeb.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class webEntities : DbContext
+    public partial class QLBHEntities : DbContext
     {
-        public webEntities()
-            : base("name=webEntities")
+        public QLBHEntities()
+            : base("name=QLBHEntities")
         {
         }
     
@@ -25,21 +25,12 @@ namespace LapTrinhWeb.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<About> Abouts { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Contact> Contacts { get; set; }
-        public virtual DbSet<Content> Contents { get; set; }
-        public virtual DbSet<ContentTag> ContentTags { get; set; }
-        public virtual DbSet<Feedback> Feedbacks { get; set; }
-        public virtual DbSet<Footer> Footers { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<MenuType> MenuTypes { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Orderdetail> Orderdetails { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
-        public virtual DbSet<Slide> Slides { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
-        public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<TypeP> TypePs { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }
