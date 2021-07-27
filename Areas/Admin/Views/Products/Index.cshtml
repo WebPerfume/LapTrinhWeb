@@ -1,0 +1,78 @@
+﻿@using LapTrinhWeb.Models;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Product</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<<table class="table">
+    <tr>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Image
+        </th>
+        <th>
+            Brand Name
+        </th>
+        <th>
+            Category Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Detail)
+            </td>
+            <td>
+                <img src="~/IMG/@item.Img" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeP.TypeName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+            </td>
+        </tr>
+    }
+
+</table>
+<hr />
+Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
+<hr />
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))

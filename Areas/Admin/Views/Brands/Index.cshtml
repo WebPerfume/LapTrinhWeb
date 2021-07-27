@@ -1,0 +1,42 @@
+﻿@using LapTrinhWeb.Models;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<Brand>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Brand</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Brand Name
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BrandId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BrandId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BrandId })
+            </td>
+        </tr>
+    }
+
+</table>
+<hr />
+Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
+<hr />
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))

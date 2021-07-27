@@ -17,7 +17,7 @@ namespace LapTrinhWeb.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index",Controller="Login", id = UrlParameter.Optional }
             );
         }
     }
