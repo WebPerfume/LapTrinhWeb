@@ -13,7 +13,7 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
 {
     public class ProductsController : Controller
     {
-        private QLBHEntities db = new QLBHEntities();
+        private QLBHEntities1 db = new QLBHEntities1();
 
         private List<Product> ListP()
         {

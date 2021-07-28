@@ -9,7 +9,7 @@ namespace LapTrinhWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private QLBHEntities db = new QLBHEntities();
+        private QLBHEntities1 db = new QLBHEntities1();
         public ActionResult Index()
         {
             return View();
