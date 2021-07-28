@@ -53,7 +53,7 @@
                     <a href="@Url.Action("Login","Home")" class="user"> <img src="~/IMG/user.png" width="20" /> </a>
                 }
                 <a href="#" class="search"> <img src="~/IMG/search.png" width="20" /> </a>
-                <a href="#" class="cart"> <img src="~/IMG/cart.png" width="20" /> </a>
+                <a href="/ShoppingCart/ShowtoCart" class="cart"> <img src="~/IMG/cart.png" width="20" />@Html.Action("BagCart", "ShoppingCart") </a>
             </li>
         </ul>
     </div>

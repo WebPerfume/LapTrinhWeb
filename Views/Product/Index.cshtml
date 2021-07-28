@@ -19,17 +19,14 @@
             {
 
 
-                <div class="product__items">
+            <div class="product__items">
 
-                    <img src="~/IMG/@item.Img" />
-                    <p class="title">@item.ProductName</p>
-                    <p><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </button>
-                    <button>@Html.ActionLink("Preview", "Preview", new { id = item.ProductId })</button>
-                </div>
+                <img src="~/IMG/@item.Img" />
+                <p class="title">@item.ProductName</p>
+                <p><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
+                <button class="bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
+                <button>@Html.ActionLink("Preview", "Preview", new { id = item.ProductId })</button>
+            </div>
             }
         </div>
         Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
