@@ -1,4 +1,5 @@
-﻿using LapTrinhWeb.Models;
+﻿using BotDetect.Web.Mvc;
+using LapTrinhWeb.Models;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -81,6 +82,7 @@ namespace LapTrinhWeb.Controllers
         //POST: Register
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [CaptchaValidation("CaptchaCode","registerCaptcha","mã xác nhận không đúng")]
         public ActionResult Register(User _user)
         {
             if (ModelState.IsValid)
@@ -92,6 +94,7 @@ namespace LapTrinhWeb.Controllers
                     db.Configuration.ValidateOnSaveEnabled = false;
                     db.Users.Add(_user);
                     db.SaveChanges();
+                    MvcCaptcha.ResetCaptcha("registerCaptcha");
                     return RedirectToAction("Index");
                 }
                 else
@@ -102,7 +105,7 @@ namespace LapTrinhWeb.Controllers
 
 
             }
-            return View();
+            return RedirectToAction("Login");
         }
 
         //create a string MD5
