@@ -45,9 +45,16 @@
             </li>
             <li> <a href="#"> Introduce</a> </li>
             <li>
-                <a href="#" class="user"> <img src="~/IMG/user.png" width="20" /> </a>
+                @if (Session["idUser"] != null)
+                {
+                    <a href="~/Home/Logout"><img src="~/IMG/sign-out-alt-solid.svg" width="20"/></a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Login","Home")" class="user"> <img src="~/IMG/user.png" width="20" /> </a>
+                }
                 <a href="#" class="search"> <img src="~/IMG/search.png" width="20" /> </a>
-                <a href="#" class="cart"> <img src="~/IMG/cart.png" width="20" /> </a>
+                <a href="/ShoppingCart/ShowtoCart" class="cart"> <img src="~/IMG/cart.png" width="20" />@Html.Action("BagCart", "ShoppingCart") </a>
             </li>
         </ul>
     </div>

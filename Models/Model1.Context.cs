@@ -13,10 +13,10 @@ namespace LapTrinhWeb.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLBHEntities3 : DbContext
+    public partial class QLBHEntities4 : DbContext
     {
-        public QLBHEntities3()
-            : base("name=QLBHEntities3")
+        public QLBHEntities4()
+            : base("name=QLBHEntities4")
         {
         }
     
