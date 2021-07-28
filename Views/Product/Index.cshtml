@@ -17,24 +17,30 @@
         <div class="product__wrap">
             @foreach (var item in Model)
             {
-
-
                 <div class="product__items">
+                    <div class="product__img">
+                        <img src="~/IMG/@item.Img" />
 
-                    <img src="~/IMG/@item.Img" />
-                    <p class="title">@item.ProductName</p>
-                    <p><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </button>
-                    <button>@Html.ActionLink("Preview", "Preview", new { id = item.ProductId })</button>
+                    </div>
+                    <div class="product__info">
+                        <p class="title">@item.ProductName</p>
+                        <p class="price"><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
+
+                    </div>
+                    <div class="over__lay">
+                        <button class="cart_btn btn btn flex-shrink-0" type="button">
+
+                            Add to cart
+                        </button>
+                        <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
+                    </div>
                 </div>
             }
         </div>
-        Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
-        <hr />
-        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+        <div class="product_page">
+            <p> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</p>
+            <p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>
+        </div>
     </div>
 </section>
 <section class="banner">
