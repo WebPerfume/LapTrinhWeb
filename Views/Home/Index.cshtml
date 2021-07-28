@@ -44,10 +44,7 @@
 
                     </div>
                     <div class="over__lay">
-                        <button class="cart_btn btn btn flex-shrink-0" type="button">
-                          
-                            Add to cart
-                        </button>
+                        <button class="cart_btn bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
                         <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
                     </div>
                 </div>  
@@ -55,10 +52,38 @@
         </div>
         <div class="product_page">
             <p> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</p>
-            <p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>
+            @*<p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>*@
         </div>
     </div>
 </section>
+@*<section class="saleUp">
+    <h2 class="title">Sale Up To 50%</h2>
+    <div class="container">
+        <div class="saleUp__wrap">
+            <div class="product__items">
+                <img src="~/IMG/saleup.jpg" />
+                <p class="title">Chanel Coco Mademoiselle</p>
+                <p><span>3.290.000</span><span>4.200.200</span></p>
+            </div>
+            <div class="product__items">
+                <img src="~/IMG/saleup.jpg" />
+                <p class="title">Chanel Coco Mademoiselle</p>
+                <p><span>3.290.000</span><span>4.200.200</span></p>
+            </div>
+            <div class="product__items">
+                <img src="~/IMG/saleup.jpg" />
+                <p class="title">Chanel Coco Mademoiselle</p>
+                <p><span>3.290.000</span><span>4.200.200</span></p>
+            </div>
+            <div class="product__items">
+                <img src="~/IMG/saleup.jpg" />
+                <p class="title">Chanel Coco Mademoiselle</p>
+                <p><span>3.290.000</span><span>4.200.200</span></p>
+            </div>
+
+        </div>
+    </div>
+</section>*@
 <section class="banner">
     <div class="banner__item">
         <img src="~/IMG/car.png" width="50" />

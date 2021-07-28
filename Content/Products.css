@@ -1,4 +1,5 @@
-﻿.product{
+﻿/*Produc List*/
+.product{
     padding: 50px 0;
 }
 
@@ -41,7 +42,6 @@
 
 }
 .product__img img {
-    width: 100%;
     min-height: 100%;
     min-width:100%;
     object-fit: cover;
@@ -74,18 +74,8 @@
     font-size: 15px;
     font-weight: bold;
     margin-top: 0;
-    /*margin-bottom: 30px;*/
+
 }
-
-    /*.product__info .price {
-    
-        margin-bottom: 20px;
-    }
-
-    .product__info button {
-        display:block;
-    }*/
-
 
 .product__items {
     font-size: 15px;
@@ -123,10 +113,18 @@
     border: 0;
     border-radius: 20px;
     margin-bottom: 10px;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight:bold;
 }
+
+    .cart_btn a {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: black;
+    }
+
+    .cart_btn a:hover {
+        text-decoration:none;
+    }
 
 .preview_btn {
     width: 150px;
@@ -170,3 +168,172 @@
 .product_page p:first-child a{
     background: transparent;
 }
+
+/*End list Products*/
+
+/*Preview Product*/
+.pre{
+    padding: 70px 0;
+}
+
+.pre_img {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .pre_img img {
+        width: 100%;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.pre_content{
+    padding: 50px;
+}
+
+.pre_content .pre_title{
+    font-size: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position:relative;
+    display:flex;
+    align-items:center;
+
+}
+
+    .pre_content .pre_title:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: gray;
+    }
+
+    .pre_content .pre_title span{
+        font-size: 20px;
+        margin-left: 30px;
+        padding: 5px 10px;
+        background: red;
+        color: white;
+        border-radius: 5px;
+    }
+
+
+    .pre_content .p {
+        font-size: 14px;
+    }
+
+    .pre_content p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .pre_content .detail_product{
+        font-size: 20px;
+        display: block;
+        margin: 40px 0 ;
+    }
+
+    .pre_content .price{
+        margin-left: 20px;
+        font-weight:bolder;
+        font-size: 30px;
+    }
+
+    .pre_content .cart_btn {
+        width: 250px;
+        height: 50px;
+        margin-top: 20px;
+        background: black;
+        border: 3px solid black;
+        border-radius: 5px;
+        transition: 0.4s;
+
+    }
+
+        .pre_content .cart_btn a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pre_content .cart_btn:hover {
+            background: white;
+            transition: 0.4s;
+        }
+            .pre_content .cart_btn:hover  a {
+                color: black;
+                transition: 0.4s;
+            }
+
+    .pre_content .guide{
+        width: 100%;
+        margin-top: 40px;
+        padding-top: 30px;
+        position: relative;
+        font-size: 20px;
+    }
+
+    .pre_content .guide img {
+        margin-right: 40px;
+    }
+
+
+        .pre_content .guide:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: gray;
+        }
+
+    .pre_content .guide_item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+.pre .more {
+    width: 180px;
+    padding: 10px;
+    margin: 40px auto 0;
+    border: 3px solid black;
+    display: block;
+    background: black;
+    transition: 0.4s;
+}
+
+    .pre .more a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pre .more:hover {
+        background: white;
+        transition: 0.4s;
+    }
+
+        .pre .more:hover a {
+            text-decoration:none;
+            color: black;
+            transition: 0.4s;
+        }

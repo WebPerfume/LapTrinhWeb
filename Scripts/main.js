@@ -109,5 +109,20 @@ $(document).ready(function () {
     $(".right-arrow").on("click", function () {
         $carousel.flickity("previous");
     });
+
+    let $carousel2 = $(".saleUp__wrap");
+    $carousel2.flickity({
+        //Options
+        cellAlign: "left",
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        autoPlay: true,
+        friction: 0.8,
+    });
+
+
+
 })
 

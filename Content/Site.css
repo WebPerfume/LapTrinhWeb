@@ -17,22 +17,6 @@ img{
     margin: 20px 0;
 }
 
-.more {
-    width: 70px;
-    text-align: center;
-    padding: 10px;
-    margin: 40px auto 0;
-    display: block;
-    color: black;
-    font-size: 20px;
-    transition: 0.4s;
-}
-    .more:hover {
-        text-decoration: none;
-        color: black;
-
-    }
-
 
 .right-arrow {
     position: absolute;
@@ -96,7 +80,53 @@ img{
         position: absolute;
     }
 
+/*Sale Up*/
+/*.saleUp {
+    width: 100%;
+    background: black;
+    padding: 30px 0 80px;
+    position: relative;
+}
 
+.saleUp .container{
+    width: 100%;
+    height: 100%;
+}
+    .saleUp .more {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+
+    .saleUp h2 {
+        font-size: 50px;
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+        position: relative;
+        color: white;
+    }
+        .saleUp h2:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: gray;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+.saleUp__wrap {
+    width: 100%;
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+}
+
+    .saleUp__wrap .product__items {
+        width: calc((100% / 4) - 30px);
+        height: 100%;
+        background: white;
+    }*/
 
 /*Banner*/
 .banner {
