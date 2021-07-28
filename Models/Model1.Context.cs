@@ -12,11 +12,13 @@ namespace LapTrinhWeb.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class QLBHEntities1 : DbContext
+    public partial class QLBHEntities2 : DbContext
     {
-        public QLBHEntities1()
-            : base("name=QLBHEntities1")
+        public QLBHEntities2()
+            : base("name=QLBHEntities2")
         {
         }
     
@@ -25,6 +27,7 @@ namespace LapTrinhWeb.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Orderdetail> Orderdetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -32,5 +35,31 @@ namespace LapTrinhWeb.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<TypeP> TypePs { get; set; }
         public virtual DbSet<User> Users { get; set; }
+    
+        public virtual int Sp_Account_Login(string email, string matkhau)
+        {
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var matkhauParameter = matkhau != null ?
+                new ObjectParameter("Matkhau", matkhau) :
+                new ObjectParameter("Matkhau", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Sp_Account_Login", emailParameter, matkhauParameter);
+        }
+    
+        public virtual ObjectResult<Nullable<bool>> Sp_Account_Login_Admin(string email, string matkhau)
+        {
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var matkhauParameter = matkhau != null ?
+                new ObjectParameter("Matkhau", matkhau) :
+                new ObjectParameter("Matkhau", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("Sp_Account_Login_Admin", emailParameter, matkhauParameter);
+        }
     }
 }

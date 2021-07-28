@@ -10,19 +10,15 @@ namespace LapTrinhWeb.Areas.Admin.Models
 
     public class Account
     {
-        private QLBHEntities1 db;
+        private QLBHEntities2 db;
         public Account()
         {
-            db = new QLBHEntities1();
+            db = new QLBHEntities2();
         }
         public bool Login(string user, string pass)
         {
-            object[] sqlParams = new SqlParameter[]
-            {
-                new SqlParameter("@Email",user),
-                new SqlParameter("@Matkhau",pass)
-            };
-            var res = db.Database.SqlQuery<bool>("Sp_Account_Login @Email,@Matkhau", sqlParams).SingleOrDefault();
+
+            var res = db.Admins.Where(p => p.Email.Equals(user) && p.Pass.Equals(pass)).Count() == 1 ? true : false;
             return res;
         }
     }
