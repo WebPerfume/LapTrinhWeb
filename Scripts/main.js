@@ -84,6 +84,10 @@ mybutton.addEventListener('click', () => {
 
 
 $(document).ready(function () {
+
+    $('.over__lay').addClass('active');
+
+
     let $carousel = $(".carousel__wrap");
     $carousel.flickity({
         //Options
