@@ -207,7 +207,6 @@
   <ItemGroup>
     <Content Include="Assets\Admin\css\sb-admin-2.css" />
     <Content Include="Assets\Admin\css\sb-admin-2.min.css" />
-
     <Content Include="Assets\Admin\img\login.jpg" />
     <Content Include="Assets\Admin\img\undraw_posting_photo.svg" />
     <Content Include="Assets\Admin\img\undraw_profile.svg" />

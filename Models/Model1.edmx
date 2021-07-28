@@ -38,7 +38,7 @@
           <Key>
             <PropertyRef Name="OrderId" />
           </Key>
-          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="Status" Type="int" />
           <Property Name="UserId" Type="int" />
@@ -229,7 +229,7 @@
           <Key>
             <PropertyRef Name="OrderId" />
           </Key>
-          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Int32" />
           <Property Name="UserId" Type="Int32" />
@@ -350,7 +350,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLBHEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLBHEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Brands" EntityType="Self.Brand" />
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetail" />
@@ -389,7 +389,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLBHModelStoreContainer" CdmEntityContainer="QLBHEntities3">
+        <EntityContainerMapping StorageEntityContainer="QLBHModelStoreContainer" CdmEntityContainer="QLBHEntities4">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="QLBHModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
