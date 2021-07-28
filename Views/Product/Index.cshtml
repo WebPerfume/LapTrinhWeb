@@ -27,7 +27,7 @@
                         <p class="price"><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
                     </div>
                     <div class="over__lay">
-                        <button class="cart_btn bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
+                        <button class="cart_btn me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
                         <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
                     </div>
                 </div>

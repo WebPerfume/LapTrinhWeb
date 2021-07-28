@@ -1889,6 +1889,7 @@
     <Content Include="Assets\Admin\vendor\jquery\jquery.min.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\Cart.css" />
     <Content Include="Content\flickity.css" />
     <Content Include="Content\fontLoginUser.css" />
     <Content Include="Content\PagedList.css" />

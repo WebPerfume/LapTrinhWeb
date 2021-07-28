@@ -134,13 +134,13 @@ img{
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    padding: 50px;
+    padding-bottom: 50px;
 }
 
 .banner__item {
     display: flex;
     align-items: center;
-    width: 450px;
+    width: 400px;
     padding: 15px 40px;
     border: 2px solid rgba(128, 128, 128, 2);
 }

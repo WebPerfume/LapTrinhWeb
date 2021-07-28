@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ShowtoCart</h2>
 
-
+<section class="showCart">
+<h2 class="title text-center">Your Cart</h2>
+<div class="container">
     @if (Model != null)
     {
-
         <table class="table">
             <thead>
                 <tr>
@@ -53,20 +53,18 @@
                     </tr>
                 }
             </tbody>
-            <tfoot>
-
-                <tr>
-                    <td colspan="5" style="text-align:right">Sum Total: @Model.TotalMoney()</td>
-                    <td>
-                        @using (Html.BeginForm("CheckOut", "ShoppingCart"))
-                        {
-                            <input type="submit" value="CheckOut" class="btn btn-success" />
-                         }
-                        </td>
-                </tr>
-
-            </tfoot>
         </table>
-        @Html.ActionLink("By More","Index","Product")
+        <div class="total">
+            <div>Sum Total: @Model.TotalMoney()</div>
+            <div class="amount">
+                @using (Html.BeginForm("CheckOut", "ShoppingCart"))
+                {
+                    <input type="submit" value="CheckOut" class="btn btn-success" />
+                }
+            </div>
+        </div>
+        <button class="backList">@Html.ActionLink("By More", "Index", "Product")</button>
     }
+</div>
 
+</section>

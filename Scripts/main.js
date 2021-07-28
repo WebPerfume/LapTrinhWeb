@@ -22,12 +22,6 @@ searchBtn.addEventListener('click', (e) => {
     overlay.classList.add('active');
 })
 
-cartBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navCart.classList.add('active');
-    overlay.classList.add('active');
-})
-
 
 //Close Nav Button
 closeSearchBtn.addEventListener('click', (e) => {
