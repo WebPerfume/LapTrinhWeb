@@ -1892,6 +1892,7 @@
     <Content Include="Content\Cart.css" />
     <Content Include="Content\flickity.css" />
     <Content Include="Content\fontLoginUser.css" />
+    <Content Include="Content\Login_user.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Products.css" />
     <Content Include="Content\_Address.css" />
