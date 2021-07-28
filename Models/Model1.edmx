@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLBHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLBHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="AdminId" />
@@ -152,14 +152,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="Sp_Account_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Email" Type="nvarchar" Mode="In" />
-          <Parameter Name="Matkhau" Type="varchar" Mode="In" />
-        </Function>
-        <Function Name="Sp_Account_Login_Admin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Email" Type="nvarchar" Mode="In" />
-          <Parameter Name="Matkhau" Type="varchar" Mode="In" />
-        </Function>
         <EntityContainer Name="QLBHModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
@@ -194,7 +186,8 @@
             <End Role="Admin" EntitySet="Admin" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLBHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -357,7 +350,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLBHEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLBHEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Brands" EntityType="Self.Brand" />
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetail" />
@@ -390,21 +383,13 @@
             <End Role="TypeP" EntitySet="TypePs" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <FunctionImport Name="Sp_Account_Login">
-            <Parameter Name="Email" Mode="In" Type="String" />
-            <Parameter Name="Matkhau" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="Sp_Account_Login_Admin" ReturnType="Collection(Boolean)">
-            <Parameter Name="Email" Mode="In" Type="String" />
-            <Parameter Name="Matkhau" Mode="In" Type="String" />
-          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLBHModelStoreContainer" CdmEntityContainer="QLBHEntities2">
+        <EntityContainerMapping StorageEntityContainer="QLBHModelStoreContainer" CdmEntityContainer="QLBHEntities3">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="QLBHModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
@@ -487,8 +472,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="Sp_Account_Login" FunctionName="QLBHModel.Store.Sp_Account_Login" />
-          <FunctionImportMapping FunctionImportName="Sp_Account_Login_Admin" FunctionName="QLBHModel.Store.Sp_Account_Login_Admin" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

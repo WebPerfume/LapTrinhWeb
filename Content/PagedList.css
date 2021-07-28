@@ -5,9 +5,10 @@
   border-radius: 4px;
 }
 
-.pagination > li {
-  display: inline;
-}
+    .pagination > li {
+        display: inline;
+        margin-left: 20px;
+    }
 
 .pagination > li > a,
 .pagination > li > span {
