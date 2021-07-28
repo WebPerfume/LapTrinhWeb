@@ -27,7 +27,7 @@
     <img class="left-arrow" src="~/IMG/left-arrow.png" width="40" />
     <img class="right-arrow" src="~/IMG/right-arrow.png" width="40" />
 </section>
-<table class="container">
+<table class="product container">
     <tr class="newProducts">
         <td class="container">
             <h2 class="text-center">New Producst</h2>
@@ -57,3 +57,4 @@
 Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
 <hr />
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+

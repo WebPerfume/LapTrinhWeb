@@ -12,13 +12,11 @@ namespace LapTrinhWeb.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.Core.Objects;
-    using System.Linq;
     
-    public partial class QLBHEntities2 : DbContext
+    public partial class QLBHEntities3 : DbContext
     {
-        public QLBHEntities2()
-            : base("name=QLBHEntities2")
+        public QLBHEntities3()
+            : base("name=QLBHEntities3")
         {
         }
     
@@ -35,31 +33,5 @@ namespace LapTrinhWeb.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<TypeP> TypePs { get; set; }
         public virtual DbSet<User> Users { get; set; }
-    
-        public virtual int Sp_Account_Login(string email, string matkhau)
-        {
-            var emailParameter = email != null ?
-                new ObjectParameter("Email", email) :
-                new ObjectParameter("Email", typeof(string));
-    
-            var matkhauParameter = matkhau != null ?
-                new ObjectParameter("Matkhau", matkhau) :
-                new ObjectParameter("Matkhau", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Sp_Account_Login", emailParameter, matkhauParameter);
-        }
-    
-        public virtual ObjectResult<Nullable<bool>> Sp_Account_Login_Admin(string email, string matkhau)
-        {
-            var emailParameter = email != null ?
-                new ObjectParameter("Email", email) :
-                new ObjectParameter("Email", typeof(string));
-    
-            var matkhauParameter = matkhau != null ?
-                new ObjectParameter("Matkhau", matkhau) :
-                new ObjectParameter("Matkhau", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<bool>>("Sp_Account_Login_Admin", emailParameter, matkhauParameter);
-        }
     }
 }
