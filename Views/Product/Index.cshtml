@@ -13,7 +13,7 @@
 
 <section class="product">
     <div class="container">
-        <h2 class="text-center">New Producst</h2>
+        <h2 class="text-center">Products</h2>
         <div class="product__wrap">
             @foreach (var item in Model)
             {
@@ -27,10 +27,7 @@
                         <p class="price"><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
                     </div>
                     <div class="over__lay">
-                        <button class="cart_btn btn btn flex-shrink-0" type="button">
-
-                            Add to cart
-                        </button>
+                        <button class="cart_btn bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
                         <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
                     </div>
                 </div>
@@ -39,7 +36,7 @@
         </div>
         <div class="product_page">
             <p> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</p>
-            <p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>
+            @*<p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>*@
         </div>
     </div>
 </section>

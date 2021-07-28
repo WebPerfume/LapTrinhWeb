@@ -208,7 +208,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Admin\css\sb-admin-2.css" />
-    <Content Include="Assets\Admin\css\sb-admin-2.min.css" />
     <Content Include="Assets\Admin\img\login.jpg" />
     <Content Include="Assets\Admin\img\undraw_posting_photo.svg" />
     <Content Include="Assets\Admin\img\undraw_profile.svg" />
@@ -221,7 +220,6 @@
     <Content Include="Assets\Admin\js\demo\chart-pie-demo.js" />
     <Content Include="Assets\Admin\js\demo\datatables-demo.js" />
     <Content Include="Assets\Admin\js\sb-admin-2.js" />
-    <Content Include="Assets\Admin\js\sb-admin-2.min.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.js" />
@@ -1915,6 +1913,7 @@
     <Content Include="IMG\addressbg.jpg" />
     <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\bann.jpg" />
+    <Content Include="IMG\box.png" />
     <Content Include="IMG\car.png" />
     <Content Include="IMG\car2.png" />
     <Content Include="IMG\carousel1.jpg" />
