@@ -54,3 +54,14 @@
   });
 
 })(jQuery); // End of use strict
+
+
+$(document).ready(function () {
+    const loginMain = $('.login-main');
+    const loginOverLay = $('.login .over__lay');
+
+
+    loginOverLay.addClass('active');
+    loginMain.addClass('active');
+
+})

@@ -59,6 +59,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
@@ -67,6 +68,9 @@ body {
   color: #858796;
   text-align: left;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -92,12 +96,9 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
 }
 
 address {
@@ -222,7 +223,6 @@ caption {
 
 th {
   text-align: inherit;
-  text-align: -webkit-match-parent;
 }
 
 label {
@@ -3550,8 +3550,6 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 1;
   display: block;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
 }
@@ -3608,7 +3606,7 @@ input[type="button"].btn-block {
   position: absolute;
   top: 0.25rem;
   left: -1.5rem;
-  display: block;
+  display: none;
   width: 1rem;
   height: 1rem;
   pointer-events: none;
@@ -3621,7 +3619,7 @@ input[type="button"].btn-block {
   position: absolute;
   top: 0.25rem;
   left: -1.5rem;
-  display: block;
+  display: none;
   width: 1rem;
   height: 1rem;
   content: "";
@@ -4493,6 +4491,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+  height: 100%;
 }
 
 .card > hr {
@@ -9900,8 +9899,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: black;
+/*  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);*/
   background-size: cover;
 }
 
@@ -10861,21 +10860,21 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: url("/Assets/Admin/img/login.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
-  background-position: center;
-  background-size: cover;
+    background: url("/Assets/Admin/img/login.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .bg-password-image {
-  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
-  background-position: center;
-  background-size: cover;
+    background: url("/Assets/Admin/img/login.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 form.user .custom-checkbox.small label {
@@ -11279,3 +11278,73 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+
+
+.login{
+    height: 600px;
+    position:relative;
+}
+
+.over__lay {
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+    z-index: 2;
+    transition: 3s;
+}
+
+.over__lay.active{
+    transform: translateX(-100%);
+}
+
+.login .col-lg-6{
+    padding-left: 0;
+}
+
+
+
+.login .row{
+    height: 100%;
+}
+.login-main{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    flex-direction: column;
+    background: black;
+    border:4px solid white;
+    border-radius: 10px;
+}
+
+    .login-main h1 {
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        position: relative;
+        border-right: 3px solid white;
+        border-left: 3px solid white;
+    }
+        
+.login .btn-user {
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+    transition: 0.4s;
+}
+            .login .btn-user:hover {
+                color: black;
+                background: white;
+                transition: 0.4s;
+            }
+
+.check-box {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+

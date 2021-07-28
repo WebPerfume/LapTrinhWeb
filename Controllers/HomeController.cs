@@ -15,6 +15,7 @@ namespace LapTrinhWeb.Controllers
     {
         private QLBHEntities2 db = new QLBHEntities2();
         private List<Product> ListP()
+
         {
             return db.Products.ToList();
         }

@@ -357,6 +357,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+
         <EntityContainer Name="QLBHEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Brands" EntityType="Self.Brand" />
