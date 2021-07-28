@@ -22,17 +22,18 @@
           rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="~/Assets/Admin/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href="~/Assets/Admin/css/sb-admin-2.css" rel="stylesheet" />
+    @*<link href="~/Assets/Admin/css/sb-admin-2.min.css" rel="stylesheet" />*@
 
 </head>
 
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div class="main_wrapper" id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="nav_aside navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
 
             <li class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
@@ -147,7 +148,7 @@
             <div id="content">
 
 
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="nav_header navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
 
 
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -155,12 +156,12 @@
                     </button>
 
 
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="form_search d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            <input type="text" class="input_search form-control small" placeholder="Search for..."
                                    aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -222,15 +223,6 @@
 
             </div>
             <!-- End of Main Content -->
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
@@ -270,7 +262,8 @@
     <script src="~/Assets/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="~/Assets/Admin/js/sb-admin-2.min.js"></script>
+    @*<script src="~/Assets/Admin/js/sb-admin-2.min.js"></script>*@
+    <script src="~/Assets/Admin/js/sb-admin-2.js"></script>
 
     <!-- Page level plugins -->
     <script src="~/Assets/Admin/vendor/chart.js/Chart.min.js"></script>

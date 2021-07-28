@@ -11,7 +11,7 @@ namespace LapTrinhWeb.Controllers
 {
     public class ProductController : Controller
     {
-        private QLBHEntities2 db = new QLBHEntities2();
+        private QLBHEntities3 db = new QLBHEntities3();
         // GET: Product
         private List<Product> ListP()
         {
