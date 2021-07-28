@@ -6,9 +6,10 @@
     </div>
     <div class="header__bottom">
         <ul class="header__list container">
-            <li> @Html.ActionLink("Home", "Index")</li>
+            <li> @Html.ActionLink("Home", "Index", "Home")</li>
             <li class="productmenu">
-                <a href="#"> Products</a>
+
+                @Html.ActionLink("Products", "Index", "Product")
                 <div class="sub text-center">
                     <div class="menu-item col-md-4">
                         <h3>Brand</h3>

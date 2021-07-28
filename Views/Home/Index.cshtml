@@ -27,34 +27,58 @@
     <img class="left-arrow" src="~/IMG/left-arrow.png" width="40" />
     <img class="right-arrow" src="~/IMG/right-arrow.png" width="40" />
 </section>
-<table class="product container">
-    <tr class="newProducts">
-        <td class="container">
-            <h2 class="text-center">New Producst</h2>
-            <div class="product__wrap">
-                @foreach (var item in Model)
-                {
+<section class="product">
+    <div class="container">
+        <h2 class="text-center">New Producst</h2>
+        <div class="product__wrap">
+            @foreach (var item in Model)
+            {
+                <div class="product__items">
+                    <div class="product__img">
+                        <img src="~/IMG/@item.Img" />
 
-
-                    <div class="product__items"  >
-                        <a href="~/Product/Preview/@item.ProductId">
-                            <img src="~/IMG/@item.Img" />
-                            <p class="title">@item.ProductName</p>
-                            <p><span>@item.Price</span><span>4.200.200</span></p>
-                        </a>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                           
-                        
                     </div>
-                }
-            </div>
-        </td>
-        </>
-</table>
-Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
-<hr />
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                    <div class="product__info">
+                        <p class="title">@item.ProductName</p>
+                        <p class="price"><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
 
+                    </div>
+                    <div class="over__lay">
+                        <button class="cart_btn btn btn flex-shrink-0" type="button">
+                          
+                            Add to cart
+                        </button>
+                        <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
+                    </div>
+                </div>  
+            }
+        </div>
+        <div class="product_page">
+            <p> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</p>
+            <p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>
+        </div>
+    </div>
+</section>
+<section class="banner">
+    <div class="banner__item">
+        <img src="~/IMG/car.png" width="50" />
+        <div class="txt">
+            <p>FreeShip</p>
+            <span>FreeShip with orders over 500</span>
+        </div>
+    </div>
+    <div class="banner__item">
+        <img src="~/IMG/technical-support.png" width="50" />
+        <div class="txt">
+            <p>Customer Service(9:00 - 21:00)</p>
+            <span>013 32495 324</span>
+        </div>
+    </div>
+    <div class="banner__item">
+        <img src="~/IMG/exchange.png" width="50" />
+        <div class="txt">
+            <p>Exchange</p>
+            <span>Within 07 days</span>
+        </div>
+    </div>
+</section>
