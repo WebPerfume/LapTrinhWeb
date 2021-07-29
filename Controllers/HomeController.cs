@@ -73,6 +73,10 @@ namespace LapTrinhWeb.Controllers
         {
             return View();
         }
+        public ActionResult Intro()
+        {
+            return View();
+        }
 
         public ActionResult Register ()
         {

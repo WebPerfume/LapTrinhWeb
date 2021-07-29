@@ -18,9 +18,11 @@
     @Styles.Render("~/Content/Products.css")
     @Styles.Render("~/Content/Cart.css")
     @Styles.Render("~/Content/Login_user.css")
+    @Styles.Render("~/Content/Intro.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <button class="mouse"></button>
     <header>
         @{
             Html.RenderPartial("_Header");
@@ -33,7 +35,7 @@
         @RenderBody()
         <div id="chat">
             <button class="open-button">
-                <img src="~/IMG/message.png" width="40" />
+                <img src="~/IMG/message.png" width="30" />
             </button>
 
             <div class="chat-popup" id="myForm">
@@ -49,7 +51,7 @@
             </div>
 
             <div id="myBtn">
-                <img src="~/IMG/backToTop.png" width="50" />
+                <img src="~/IMG/backToTop.png" width="40px" />
             </div>
 
         </div>
@@ -62,7 +64,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/main.js")
-<script src="~/Scripts/flickity.pkgd.min.js"></script>
+    <script src="~/Scripts/flickity.pkgd.min.js"></script>
+    <script src="~/Scripts/gsap.min.js"></script>
     @RenderSection("scripts", required: false)
 
 </body>

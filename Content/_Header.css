@@ -1,5 +1,5 @@
-﻿.header__top{
-    background: black;
+﻿.header__top {
+    background: linear-gradient(to right, var(--primary-cl), var(--second-cl));
     padding: 20px 0;
     border-bottom: 2px solid white;
 }
@@ -12,7 +12,15 @@
 
 .header__bottom {
     height: 60px;
-    background: black;
+    z-index: 10;
+    background: linear-gradient(to right, var(--primary-cl), var(--second-cl));
+}
+
+.header__bottom.active{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .header__bottom .container{

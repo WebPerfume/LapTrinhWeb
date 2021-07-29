@@ -1892,6 +1892,7 @@
     <Content Include="Content\Cart.css" />
     <Content Include="Content\flickity.css" />
     <Content Include="Content\fontLoginUser.css" />
+    <Content Include="Content\Intro.css" />
     <Content Include="Content\Login_user.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Products.css" />
@@ -1916,6 +1917,7 @@
     <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\bann.jpg" />
     <Content Include="IMG\box.png" />
+    <Content Include="IMG\brand.png" />
     <Content Include="IMG\car.png" />
     <Content Include="IMG\car2.png" />
     <Content Include="IMG\carousel1.jpg" />
@@ -1923,6 +1925,13 @@
     <Content Include="IMG\carousel3.jpg" />
     <Content Include="IMG\cart.png" />
     <Content Include="IMG\close.png" />
+    <Content Include="IMG\gallery1.png" />
+    <Content Include="IMG\gallery2.png" />
+    <Content Include="IMG\gallery3.png" />
+    <Content Include="IMG\gallery4.png" />
+    <Content Include="IMG\gallery5.png" />
+    <Content Include="IMG\img-map-icon.png" />
+    <Content Include="IMG\intro.png" />
     <Content Include="IMG\letter.png" />
     <Content Include="IMG\location.png" />
     <Content Include="IMG\logout.png" />
@@ -2133,6 +2142,7 @@
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\flickity.pkgd.min.js" />
+    <Content Include="Scripts\gsap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -2173,11 +2183,11 @@
     <Content Include="Views\ShoppingCart\ShowtoCart.cshtml" />
     <Content Include="Views\ShoppingCart\Bagcart.cshtml" />
     <Content Include="Views\ShoppingCart\Success.cshtml" />
+    <Content Include="Views\Home\Intro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Views\Introduce\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

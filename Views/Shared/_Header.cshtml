@@ -10,24 +10,24 @@
                 <div class="sub text-center">
                     <div class="menu-item col-md-4">
                         <h3>Brand</h3>
-                        <a href="#">Versace</a>
-                        <a href="#">Gucci</a>
-                        <a href="#">Channel</a>
-                        <a href="#">Chloe</a>
+                        @Html.ActionLink("Versace", "Index", "Product")
+                        @Html.ActionLink("Gucci", "Index", "Product")
+                        @Html.ActionLink("Products", "Index", "Product")
+                        @Html.ActionLink("Chloe", "Index", "Product")
                     </div>
                     <div class="menu-item col-md-4">
                         <h3>Gender</h3>
-                        <a href="#">Male</a>
-                        <a href="#">Female</a>
-                        <a href="#">Unisex</a>
-                        <a href="#">Niche</a>
+                        @Html.ActionLink("Male", "Index", "Product")
+                        @Html.ActionLink("Female", "Index", "Product")
+                        @Html.ActionLink("Products", "Index", "Product")
+                        @Html.ActionLink("Niche", "Index", "Product")
                     </div>
                     <div class="menu-item col-md-4">
                         <h3>Origin</h3>
-                        <a href="#">France</a>
-                        <a href="#">US</a>
-                        <a href="#">England</a>
-                        <a href="#">Italia</a>
+                        @Html.ActionLink("France", "Index", "Product")
+                        @Html.ActionLink("US", "Index", "Product")
+                        @Html.ActionLink("England", "Index", "Product")
+                        @Html.ActionLink("Italia", "Index", "Product")
                     </div>
                 </div>
             </li>
@@ -40,7 +40,7 @@
                     @Html.ActionLink("return and exchange ", "Return", "Home")
                 </div>
             </li>
-            <li> <a href="#"> Introduce</a> </li>
+            <li> @Html.ActionLink("Introduce ", "Intro", "Home")</li>
             <li>
                 @if (Session["idUser"] != null)
                 {

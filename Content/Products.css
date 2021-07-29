@@ -5,11 +5,16 @@
 
 .product h2{
     font-size: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-bottom: 40px;
     position: relative; 
 
 }
+
+.product .brand{
+    margin-bottom: 50px;
+}
+
 .product h2:after {
     content: "";
     position: absolute;
@@ -80,7 +85,6 @@
 .product__items {
     font-size: 15px;
     text-align: center;
-    cursor: pointer;
     transition: 0.5s;
     position: relative;
     overflow:hidden;
@@ -97,7 +101,7 @@
         height: 30%;
         bottom: 0;
         left: 0;
-        background: black;
+        background: linear-gradient(to right bottom, var(--primary-cl), var(--second-cl));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -146,13 +150,6 @@
         text-decoration: none
     }
 
-
-.product__items {
-    font-size: 15px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.5s;
-}
 
     .product__items:hover {
     box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, .6);
@@ -251,11 +248,10 @@
         width: 250px;
         height: 50px;
         margin-top: 20px;
-        background: black;
-        border: 3px solid black;
+        background: linear-gradient(to right bottom, var(--primary-cl), var(--second-cl));
+        border: 0;
         border-radius: 5px;
         transition: 0.4s;
-
     }
 
         .pre_content .cart_btn a {
@@ -268,14 +264,6 @@
             align-items: center;
         }
 
-        .pre_content .cart_btn:hover {
-            background: white;
-            transition: 0.4s;
-        }
-            .pre_content .cart_btn:hover  a {
-                color: black;
-                transition: 0.4s;
-            }
 
     .pre_content .guide{
         width: 100%;
@@ -310,9 +298,9 @@
     width: 180px;
     padding: 10px;
     margin: 40px auto 0;
-    border: 3px solid black;
+    border:0;
     display: block;
-    background: black;
+    background: linear-gradient(to right bottom, var(--primary-cl), var(--second-cl));
     transition: 0.4s;
 }
 
@@ -326,13 +314,8 @@
         align-items: center;
     }
 
-    .pre .more:hover {
-        background: white;
-        transition: 0.4s;
-    }
 
         .pre .more:hover a {
             text-decoration:none;
-            color: black;
-            transition: 0.4s;
+
         }
