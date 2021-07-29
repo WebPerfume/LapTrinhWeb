@@ -13,21 +13,35 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
 {
     public class TypePsController : Controller
     {
-        private QLBHEntities5 db = new QLBHEntities5();
+        private QLBHEntities6 db = new QLBHEntities6();
 
         // GET: Admin/TypePs
         private List<TypeP> ListT()
         {
             return db.TypePs.ToList();
         }
-        // GET: Admin/TypePs
-        public ActionResult Index(int? page)
+        private List<TypeP> ListT(string Search)
         {
+            return db.TypePs.Where(s => s.TypeName.StartsWith(Search)).ToList();
+        }
+        // GET: Admin/TypePs
+        public ActionResult Index(int? page, string Search)
+        {
+            if (Search == null) {
             if (page == null) page = 1;
             var List = ListT();
             int pagesize = 5;
             int pagenumber = (page ?? 1);
             return View(List.ToPagedList(pagenumber, pagesize));
+            }
+            else
+            {
+                if (page == null) page = 1;
+                var List = ListT(Search);
+                int pagesize = 5;
+                int pagenumber = (page ?? 1);
+                return View(List.ToPagedList(pagenumber, pagesize));
+            }
         }
 
         // GET: Admin/TypePs/Details/5

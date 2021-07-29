@@ -13,20 +13,36 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
 {
     public class ProductsController : Controller
     {
-        private QLBHEntities5 db = new QLBHEntities5();
+        private QLBHEntities6 db = new QLBHEntities6();
 
         private List<Product> ListP()
         {
             return db.Products.ToList();
         }
         // GET: Admin/Products
-        public ActionResult Index(int? page)
+        private List<Product> ListP(string Search)
         {
-            if (page == null) page = 1;
-            var List = ListP();
-            int pagesize = 5;
-            int pagenumber = (page ?? 1);
-            return View(List.ToPagedList(pagenumber, pagesize));
+            return db.Products.Where(s => s.ProductName.StartsWith(Search)).ToList();
+        }
+        public ActionResult Index(int? page, string Search)
+        {
+            if (Search == null)
+            {
+                if (page == null) page = 1;
+                var List = ListP();
+                int pagesize = 5;
+                int pagenumber = (page ?? 1);
+
+                return View(List.ToPagedList(pagenumber, pagesize));
+            }
+            else
+            {
+                if (page == null) page = 1;
+                var List = ListP(Search);
+                int pagesize = 5;
+                int pagenumber = (page ?? 1);
+                return View(List.ToPagedList(pagenumber, pagesize));
+            }
         }
 
         // GET: Admin/Products/Details/5

@@ -10,10 +10,10 @@ namespace LapTrinhWeb.Areas.Admin.Models
 
     public class Account
     {
-        private QLBHEntities5 db;
+        private QLBHEntities6 db;
         public Account()
         {
-            db = new QLBHEntities5();
+            db = new QLBHEntities6();
         }
         public bool Login(string user, string pass)
         {

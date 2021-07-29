@@ -14,7 +14,7 @@ namespace LapTrinhWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private QLBHEntities5 db = new QLBHEntities5();
+        private QLBHEntities6 db = new QLBHEntities6();
         private List<Product> ListP()
 
         {
