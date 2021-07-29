@@ -1,6 +1,6 @@
-﻿footer{
+﻿footer {
     width: 100%;
-    background: black;
+    background: linear-gradient(to right bottom, var(--primary-cl), var(--second-cl));
     color: white;
 }
 
@@ -26,7 +26,6 @@ footer .container-fluid {
 .store-item ul li p{
     font-size: 12px;
     margin-bottom: 10px;
-    cursor: pointer;
 }
 
 .store-item ul li p img{
@@ -65,7 +64,6 @@ footer .container-fluid {
 .social-icon img{
     margin-top: 20px;
     margin-right: 20px;
-    cursor: pointer;
 }
 
 .footer__bottom .policy h4 {

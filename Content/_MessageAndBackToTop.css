@@ -7,12 +7,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     position: fixed;
     bottom: 23px;
     left: 20px;
-    width: 70px;
-    height: 65px;
+    width: 60px;
+    height: 55px;
 }
 
 /* The popup chat - hidden by default */
