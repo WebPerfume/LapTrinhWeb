@@ -77,12 +77,12 @@
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                     <input type="submit" name="submit" class="userLogin_btn" value="Login" />
-
-                @*<div class="form-group">
-                <a href="@Url.Action("Register", "Home")">Register</a>
-            </div>*@
+                <div class="userLogin_btn">
+                    <input type="submit" name="submit" class="userLogin_login" value="Login" />
+                    <a class="userLogin_regis" href="@Url.Action("Register", "Home")">Register</a>
+                </div>
             }
+            <span class="or text-center">Or Login With</span>
             <div class="login_fb">
                 <fb:login-button scope="public_profile,email"
                                  onlogin="checkLoginState();">
