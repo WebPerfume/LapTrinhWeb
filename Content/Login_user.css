@@ -4,6 +4,10 @@
 }
 
 
+a, input{
+    cursor: none !important;
+}
+
 .userLogin_wrap {
     display: block;
     width: 500px;
