@@ -12296,7 +12296,8 @@ body.sidebar-toggled footer.sticky-footer {
 
 .nav_aside,
 .nav_header {
-    background: linear-gradient(to right top, #434343, #000000);
+    /*background: linear-gradient(to right top, #434343, #000000);*/
+    background: black;
     color: white;
 }
 

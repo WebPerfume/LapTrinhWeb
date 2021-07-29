@@ -9,7 +9,7 @@ namespace LapTrinhWeb.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        QLBHEntities6 db = new QLBHEntities6();
+        QLBHEntities7 db = new QLBHEntities7();
         public Cart GetCart()
         {
             Cart cart = Session["Cart"] as Cart;
