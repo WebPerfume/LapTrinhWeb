@@ -1913,7 +1913,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="IMG\addressbg.jpg" />
     <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\bann.jpg" />
     <Content Include="IMG\box.png" />
