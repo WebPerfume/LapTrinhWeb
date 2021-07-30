@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CheckOut</h2>
+
+
+<select class="custom-select" id="payment">
+    <option value="1">Thanh toán khi nhận hàng</option>
+    <option value="2">Thanh toán paypal</option>
+</select>
+
+<button onclick="payment();" class="btn btn-success" id="btnPayment">Đặt hàng</button>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var payment = function () {
+        const order = {
+            optionpayment:$('#payment option:selected').val()
+        };
+        $.ajax({
+            url: '@Url.Action("Payment", "ShoppingCart")',
+            type: 'POST',
+            data: { strOrder: JSON.stringify(order) },
+            success: function (res) {
+                if (res.status == true) {
+                    switch (res.optionPayment) {
+                        case 2:
+                            window.location.replace("@Url.Action("PaymentWithPaypal", "Paypal")");
+                            break;
+                        case 1:
+                            window.location.replace("@Url.Action("Success", "ShoppingCart")");
+                            break;
+                        default:
+                    }
+                }
+            },
+            error: function () {
+                alert("Lỗi");
+            }
+        });
+    }
+
+</script>
+

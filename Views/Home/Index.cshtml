@@ -42,12 +42,7 @@
                             <p class="title">@item.ProductName</p>
                             <p><span>@item.Price</span><span>4.200.200</span></p>
                         </a>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                           
-                        
+                        <button class="bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
                     </div>
                 }
             </div>

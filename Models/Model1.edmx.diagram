@@ -4,15 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="741d4a47be8c42ef9a34d50ef157e371" Name="Diagram1">
+      <Diagram DiagramId="051bf1216340494a9f93694d222832cc" Name="Diagram1">
         <EntityTypeShape EntityType="QLBHModel.Admin" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Brand" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Orderdetail" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Order" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Permission" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBHModel.TypeP" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBHModel.User" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLBHModel.User" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="QLBHModel.FK_Order_User" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_User_User" ManuallyRouted="false" />
         <AssociationConnector Association="QLBHModel.FK_Product_Brand" ManuallyRouted="false" />
