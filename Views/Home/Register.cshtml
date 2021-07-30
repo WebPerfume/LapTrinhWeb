@@ -1,7 +1,8 @@
 ﻿@model LapTrinhWeb.Models.User
 @using BotDetect.Web.Mvc;
-<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" />
-@{ MvcCaptcha registerCapcha = new MvcCaptcha("registerCapcha"); registerCapcha.UserInputID = "CaptchaCode";}
+
+<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" /> 
+@{ MvcCaptcha registerCapcha = new MvcCaptcha("registerCapcha");}
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,9 +38,17 @@
                 @Html.TextBox("CaptchaCode")
             </div>
 
-                <input type="submit" class="userLogin_regis" value="Register" />
-                <p class="back" style="margin-top: 30px">@Html.ActionLink("Back to List", "Index", "Product")</p>
-        }
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false , "", new { @class = "text-danger" })
+    <div class="form-group" style="text-align: right;">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+
     </div>
 
 </section>

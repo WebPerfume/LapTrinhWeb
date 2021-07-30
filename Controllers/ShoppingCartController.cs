@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace LapTrinhWeb.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        QLBHEntities7 db = new QLBHEntities7();
+        QLBHEntities5 db = new QLBHEntities5();
+
         public Cart GetCart()
         {
             Cart cart = Session["Cart"] as Cart;
@@ -63,8 +65,33 @@ namespace LapTrinhWeb.Controllers
         }
         public ActionResult Success()
         {
-            return View();
+            try
+            {
+                Cart cart = Session["Cart"] as Cart;
+                Order order = new Order();
+                order.CreateDate = DateTime.Now;
+                db.Orders.Add(order);
+                foreach (var item in cart.Items)
+                {
+                    Orderdetail orderdetail = new Orderdetail();
+                    orderdetail.OrderId = order.OrderId;
+                    orderdetail.ProductId = item._ShoppingProduct.ProductId;
+                    orderdetail.Quantity = item._ShopppingQuantity;
+                    orderdetail.Total = (item._ShoppingProduct.Price * item._ShopppingQuantity);
+                    db.Orderdetails.Add(orderdetail);
+                }
+
+                db.SaveChanges();
+                cart.ClearCart();
+                return View();
+            }
+            catch
+            {
+                return Content("Error Checkout. Pleace");
+            }
         }
+
+       
         public ActionResult CheckOut(FormCollection form)
         {
             try
@@ -82,6 +109,8 @@ namespace LapTrinhWeb.Controllers
                     orderdetail.Total = (item._ShoppingProduct.Price * item._ShopppingQuantity);
                     db.Orderdetails.Add(orderdetail);
                 }
+
+                
                 db.SaveChanges();
                 cart.ClearCart();
                 return RedirectToAction("Success", "ShoppingCart");
@@ -91,6 +120,39 @@ namespace LapTrinhWeb.Controllers
                 return Content("Error Checkout. Pleace");
             }
         }
+
+        
+        [HttpGet]
+        public ActionResult CheckOut()
+        {
+            return View();
+        }
+
+        public class OrderView
+        {
+            public int optionpayment { get; set; }
+        }
+
+
+        static OrderView OrderViewPayment = new OrderView();
+
+        public JsonResult Payment(string strOrder)
+        {
+
+            JavaScriptSerializer model = new JavaScriptSerializer();
+            var order = model.Deserialize<OrderView>(strOrder);
+            OrderViewPayment = order;
+            switch (order.optionpayment)
+            {
+                case 1:
+                    return Json(new { status = true, optionPayment = 1, JsonRequestBehavior.AllowGet });
+                case 2:
+                    return Json(new { status = true, optionPayment = 2, JsonRequestBehavior.AllowGet });
+                default:
+                    return Json(new { status = false });
+            }
+        }
+
 
     }
 

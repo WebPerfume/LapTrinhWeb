@@ -13,7 +13,8 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
 {
     public class TypePsController : Controller
     {
-        private QLBHEntities7 db = new QLBHEntities7();
+        private QLBHEntities5 db = new QLBHEntities5();
+
 
         // GET: Admin/TypePs
         private List<TypeP> ListT()

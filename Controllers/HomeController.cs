@@ -14,7 +14,8 @@ namespace LapTrinhWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private QLBHEntities7 db = new QLBHEntities7();
+        private QLBHEntities5 db = new QLBHEntities5();
+
         private List<Product> ListP()
 
         {
@@ -87,9 +88,11 @@ namespace LapTrinhWeb.Controllers
         //POST: Register
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [CaptchaValidation("CaptchaCode","registerCaptcha","mã xác nhận không đúng")]
+        [CaptchaValidation("CaptchaCode", "registerCapcha", "mã xác nhận không đúng")]
         public ActionResult Register(User _user)
         {
+
+            /*ModelState.Remove("CaptchaCode");*/
             if (ModelState.IsValid)
             {
                 var check = db.Users.FirstOrDefault(s => s.Email == _user.Email);
@@ -99,18 +102,18 @@ namespace LapTrinhWeb.Controllers
                     db.Configuration.ValidateOnSaveEnabled = false;
                     db.Users.Add(_user);
                     db.SaveChanges();
-                    MvcCaptcha.ResetCaptcha("registerCaptcha");
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Login");
                 }
                 else
                 {
+                    ModelState.AddModelError("Email","Email already exists");
                     ViewBag.error = "Email already exists";
                     return View();
                 }
 
 
             }
-            return RedirectToAction("Login");
+            return View();
         }
 
         //create a string MD5
