@@ -214,7 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Admin\css\sb-admin-2.css" />
-    <Content Include="Assets\Admin\css\sb-admin-2.min.css" />
     <Content Include="Assets\Admin\img\login.jpg" />
     <Content Include="Assets\Admin\img\undraw_posting_photo.svg" />
     <Content Include="Assets\Admin\img\undraw_profile.svg" />
@@ -227,7 +226,6 @@
     <Content Include="Assets\Admin\js\demo\chart-pie-demo.js" />
     <Content Include="Assets\Admin\js\demo\datatables-demo.js" />
     <Content Include="Assets\Admin\js\sb-admin-2.js" />
-    <Content Include="Assets\Admin\js\sb-admin-2.min.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\Admin\vendor\bootstrap\js\bootstrap.js" />
@@ -1897,8 +1895,11 @@
     <Content Include="Assets\Admin\vendor\jquery\jquery.min.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.js" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\Cart.css" />
     <Content Include="Content\flickity.css" />
     <Content Include="Content\fontLoginUser.css" />
+    <Content Include="Content\Intro.css" />
+    <Content Include="Content\Login_user.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Products.css" />
     <Content Include="Content\_Address.css" />
@@ -1918,9 +1919,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="IMG\addressbg.jpg" />
     <Content Include="IMG\backToTop.png" />
     <Content Include="IMG\bann.jpg" />
+    <Content Include="IMG\box.png" />
+    <Content Include="IMG\brand.png" />
     <Content Include="IMG\car.png" />
     <Content Include="IMG\car2.png" />
     <Content Include="IMG\carousel1.jpg" />
@@ -1928,6 +1930,13 @@
     <Content Include="IMG\carousel3.jpg" />
     <Content Include="IMG\cart.png" />
     <Content Include="IMG\close.png" />
+    <Content Include="IMG\gallery1.png" />
+    <Content Include="IMG\gallery2.png" />
+    <Content Include="IMG\gallery3.png" />
+    <Content Include="IMG\gallery4.png" />
+    <Content Include="IMG\gallery5.png" />
+    <Content Include="IMG\img-map-icon.png" />
+    <Content Include="IMG\intro.png" />
     <Content Include="IMG\letter.png" />
     <Content Include="IMG\location.png" />
     <Content Include="IMG\logout.png" />
@@ -2138,6 +2147,7 @@
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\flickity.pkgd.min.js" />
+    <Content Include="Scripts\gsap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -2180,11 +2190,11 @@
     <Content Include="Views\ShoppingCart\Success.cshtml" />
     <Content Include="Views\Paypal\PaymentWithPaypal.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Views\Introduce\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

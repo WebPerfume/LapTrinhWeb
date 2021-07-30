@@ -15,6 +15,7 @@ namespace LapTrinhWeb.Controllers
     public class HomeController : Controller
     {
         private QLBHEntities5 db = new QLBHEntities5();
+
         private List<Product> ListP()
 
         {
@@ -70,6 +71,10 @@ namespace LapTrinhWeb.Controllers
             return View();
         }
         public ActionResult Return()
+        {
+            return View();
+        }
+        public ActionResult Intro()
         {
             return View();
         }

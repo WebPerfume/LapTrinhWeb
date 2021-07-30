@@ -17,6 +17,7 @@ namespace LapTrinhWeb.Models
     {
         public QLBHEntities5()
             : base("name=QLBHEntities5")
+
         {
         }
     

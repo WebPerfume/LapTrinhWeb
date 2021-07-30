@@ -1,0 +1,48 @@
+﻿.intro{
+    padding: 70px 0;
+
+}
+
+    .intro h2 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+.intro_main {
+    color: white;
+    width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(to right, hsla(269, 99%, 70%, 0.605), hsla(191, 100%, 69%, 0.605));
+}
+
+.intro_img{
+    width: 60%;
+    margin: 0 auto;
+    position:relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.intro_img img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.intro_content h4{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+.intro_content p {
+    padding: 20px;
+    text-align: justify;
+        font-size: 17px;
+        color: white;
+        line-height: 20px;
+}

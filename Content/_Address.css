@@ -15,10 +15,7 @@
 
 .system__item {
     width: calc((100% / 3) - 30px);
-    background-image: url(/IMG/addressbg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(to right top, hsla(269, 99%, 70%, 0.305), hsla(191, 100%, 69%, 0.305));
     padding: 30px;
 }
 

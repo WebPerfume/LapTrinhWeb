@@ -14,6 +14,7 @@ namespace LapTrinhWeb.Areas.Admin.Models
         public Account()
         {
             db = new QLBHEntities5();
+
         }
         public bool Login(string user, string pass)
         {

@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ShowtoCart</h2>
 
 
 @if (Model != null)
@@ -66,4 +65,67 @@
     </table>
     @Html.ActionLink("By More", "Index", "Product")
 }
+=======
+<section class="showCart">
+<h2 class="title text-center">Your Cart</h2>
+<div class="container">
+    @if (Model != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sum</th>
+                    <th>DeLete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    double Total = Convert.ToDouble(item._ShoppingProduct.Price) * item._ShopppingQuantity;
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => item._ShoppingProduct.ProductName)
+                        </td>
+                        <td>
+                            <img src="~/IMG/@item._ShoppingProduct.Img" width="100" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item._ShoppingProduct.Price)
+                        </td>
+                        <td>
+                            @using (Html.BeginForm("UpdateQuantity", "ShoppingCart"))
+                            {
+                                <input type="hidden" value="@item._ShoppingProduct.ProductId" name="ID_Pro" />
+                                <input type="number" value="@item._ShopppingQuantity" name="Quantity" />
+                                <input type="submit" value="Update" />
+                            }
+                        </td>
+                        <td>
+                            Total: @Total
+                        </td>
+                        <td>
+                            <a href="/ShoppingCart/RemoveCart/@item._ShoppingProduct.ProductId">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="total">
+            <div>Sum Total: @Model.TotalMoney()</div>
+            <div class="amount">
+                @using (Html.BeginForm("CheckOut", "ShoppingCart"))
+                {
+                    <input type="submit" value="CheckOut" class="btn btn-success" />
+                }
+            </div>
+        </div>
+        <button class="backList">@Html.ActionLink("By More", "Index", "Product")</button>
+    }
+</div>
 
+
+</section>

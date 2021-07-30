@@ -12261,7 +12261,7 @@ body.sidebar-toggled footer.sticky-footer {
     align-content: center;
     height: 100%;
     flex-direction: column;
-    background: black;
+    background: linear-gradient(to right top, #434343, #000000);
     border: 4px solid white;
     border-radius: 10px;
 }
@@ -12296,6 +12296,7 @@ body.sidebar-toggled footer.sticky-footer {
 
 .nav_aside,
 .nav_header {
+    /*background: linear-gradient(to right top, #434343, #000000);*/
     background: black;
     color: white;
 }

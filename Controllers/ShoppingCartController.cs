@@ -11,6 +11,7 @@ namespace LapTrinhWeb.Controllers
     public class ShoppingCartController : Controller
     {
         QLBHEntities5 db = new QLBHEntities5();
+
         public Cart GetCart()
         {
             Cart cart = Session["Cart"] as Cart;

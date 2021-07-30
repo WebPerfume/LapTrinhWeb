@@ -12,6 +12,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
 
+
+<section class="welcome">
+        <div class="txt">
+            <h1>
+                HI! Welcome To Perfume
+            </h1>
+            <span>Click To Begin!</span>
+            <div class="welcome_overlay"></div>
+        </div>
+</section>
+
+
+
+
 <section class="carousel">
     <div class="carousel__wrap">
         <div class="carousel__item">
@@ -27,29 +41,96 @@
     <img class="left-arrow" src="~/IMG/left-arrow.png" width="40" />
     <img class="right-arrow" src="~/IMG/right-arrow.png" width="40" />
 </section>
-<table class="product container">
-    <tr class="newProducts">
-        <td class="container">
-            <h2 class="text-center">New Producst</h2>
-            <div class="product__wrap">
-                @foreach (var item in Model)
-                {
+<section class="product">
+    <div class="container">
+        <h2 class="text-center">New Producst</h2>
+        <div class="brand">
+            <img src="~/IMG/brand.png" />
+        </div>
+        <div class="product__wrap">
+            @foreach (var item in Model)
+            {
+                <div class="product__items">
+                    <div class="product__img">
+                        <img src="~/IMG/@item.Img" />
 
-
-                    <div class="product__items"  >
-                        <a href="~/Product/Preview/@item.ProductId">
-                            <img src="~/IMG/@item.Img" />
-                            <p class="title">@item.ProductName</p>
-                            <p><span>@item.Price</span><span>4.200.200</span></p>
-                        </a>
-                        <button class="bi-cart-fill me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
                     </div>
-                }
-            </div>
-        </td>
-        </>
-</table>
-Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount
-<hr />
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                    <div class="product__info">
+                        <p class="title">@item.ProductName</p>
+                        <p class="price"><span>@String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C0}", item.Price)</span><span>4.200.200</span></p>
 
+                    </div>
+                    <div class="over__lay">
+                        <button class="cart_btn me-1">@Html.ActionLink("Add Cart", "AddtoCart", "ShoppingCart", new { Id = item.ProductId }, null)</button>
+                        <button class="preview_btn">@Html.ActionLink("Preview", "Preview", "Product", new { id = item.ProductId }, null)</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="product_page">
+            <p> @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</p>
+            @*<p> Trang @(Model.PageCount<Model.PageNumber?1:Model.PageNumber)/@Model.PageCount</p>*@
+        </div>
+    </div>
+</section>
+
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7838.684254869503!2d106.70676642475235!3d10.785086936675276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1547181657956" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div class="map_content">
+        <img src="~/IMG/img-map-icon.png" alt="mapIcon">
+        <h3>Open Map</h3>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="container">
+        <div class="content__txt">
+            <h2>Gallery</h2>
+            <p class="desc">
+                We are a team of professionals in the perfume and we will have you a perfect look
+            </p>
+        </div>
+        <div class="gallery__grid" itemscope data-pswp-uid="1">
+            <figure class="gallery__grid-item">
+                    <img src="~/IMG/gallery1.png" alt="" loading="lazy"/>
+            </figure>
+            <figure class="gallery__grid-item">
+                    <img src="~/IMG/gallery2.png" alt="" loading="lazy" />
+            </figure>
+            <figure class="gallery__grid-item">
+                    <img src="~/IMG/gallery3.png" alt="" loading="lazy"/>
+            </figure>
+            <figure class="gallery__grid-item">
+                    <img src="~/IMG/gallery4.png" alt="" loading="lazy"/>
+            </figure>
+            <figure class="gallery__grid-item">
+                    <img src="~/IMG/gallery5.png" alt="" loading="lazy" />
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="banner__item">
+        <img src="~/IMG/car.png" width="50" />
+        <div class="txt">
+            <p>FreeShip</p>
+            <span>FreeShip with orders over 500</span>
+        </div>
+    </div>
+    <div class="banner__item">
+        <img src="~/IMG/technical-support.png" width="50" />
+        <div class="txt">
+            <p>Customer Service(9:00 - 21:00)</p>
+            <span>013 32495 324</span>
+        </div>
+    </div>
+    <div class="banner__item">
+        <img src="~/IMG/exchange.png" width="50" />
+        <div class="txt">
+            <p>Exchange</p>
+            <span>Within 07 days</span>
+        </div>
+    </div>
+</section>

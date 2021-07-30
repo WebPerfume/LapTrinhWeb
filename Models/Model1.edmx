@@ -372,6 +372,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QLBHEntities5" annotation:LazyLoadingEnabled="true">
+
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Brands" EntityType="Self.Brand" />
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetail" />
@@ -411,7 +412,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+
         <EntityContainerMapping StorageEntityContainer="QLBHModelStoreContainer" CdmEntityContainer="QLBHEntities5">
+
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="QLBHModel.Admin">
               <MappingFragment StoreEntitySet="Admin">

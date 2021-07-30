@@ -15,19 +15,34 @@ namespace LapTrinhWeb.Areas.Admin.Controllers
     {
 
         private QLBHEntities5 db = new QLBHEntities5();
+
         // GET: Admin/Brands
         private List<Brand> ListB()
         {
             return db.Brands.ToList();
         }
-        // GET: Admin/Brands
-        public ActionResult Index(int? page)
+        private List<Brand> ListB(string Search)
         {
+            return db.Brands.Where(s => s.BrandName.StartsWith(Search)).ToList();
+        }
+        // GET: Admin/Brands
+        public ActionResult Index(int? page,string Search)
+        {
+            if (Search == null) { 
             if (page == null) page = 1;
             var List = ListB();
             int pagesize = 5;
             int pagenumber = (page ?? 1);
             return View(List.ToPagedList(pagenumber, pagesize));
+            }
+            else
+            {
+                if (page == null) page = 1;
+                var List = ListB(Search);
+                int pagesize = 5;
+                int pagenumber = (page ?? 1);
+                return View(List.ToPagedList(pagenumber, pagesize));
+            }
         }
 
         // GET: Admin/Brands/Details/5

@@ -9,7 +9,12 @@
 }
 
 <h2 style="text-align:center">Product</h2>
+@using (Html.BeginForm("Index", "Products"))
+{
+    @Html.TextBox("Search")
+    <input type="submit" value="Search" />
 
+}
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
